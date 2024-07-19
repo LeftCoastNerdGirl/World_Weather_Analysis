@@ -1,50 +1,33 @@
-# python-api-challenge
+# Analyzing API weather data
 
-Instructions
-This activity is broken down into two deliverables, WeatherPy and VacationPy.
+The first challenge involves using an API key to pull data from open weather map dot org and using it to analyze weather patterns based on latitude.  
 
-Part 1: WeatherPy
-In this deliverable, you'll create a Python script to visualize the weather of over 500 cities of varying distances from the equator. You'll use the citipy Python libraryLinks to an external site., the OpenWeatherMap APILinks to an external site., and your problem-solving skills to create a representative model of weather across cities.
+Once the data is extracted and cleaned, it is stored in a Pandas dataframe. That data is then exported to a csv file.  The dataframe is then used in conjunction with Matplotlib to create scatterplots displaying the following relationships:  
 
-For this part, you'll use the WeatherPy.ipynb Jupyter notebook provided in the starter code ZIP file. The starter code will guide you through the process of using your Python coding skills to develop a solution to address the required functionalities.
+Latitude vs. Temperature  
+Latitude vs. Humidity  
+Latitude vs. Cloudiness  
+Latitude vs. Wind Speed  
 
-To get started, the code required to generate random geographic coordinates and the nearest city to each latitude and longitude combination is provided.
+![image](https://github.com/user-attachments/assets/e555fa67-0019-4ef3-ba77-a51abf322111)
 
-Requirement 1: Create Plots to Showcase the Relationship Between Weather Variables and Latitude
-To fulfill the first requirement, you'll use the OpenWeatherMap API to retrieve weather data from the cities list generated in the starter code. Next, you'll create a series of scatter plots to showcase the following relationships:
 
-Latitude vs. Temperature
+Next, using Scipy stats library, r-squared is calculated and linear regression lines plotted to analyze the correlations between the various weather elements and the latitude of the areas tested. The following plots were created and analysis explained:
 
-Latitude vs. Humidity
+Northern Hemisphere: Temperature vs. Latitude    
+Southern Hemisphere: Temperature vs. Latitude  
+Northern Hemisphere: Humidity vs. Latitude  
+Southern Hemisphere: Humidity vs. Latitude  
+Northern Hemisphere: Cloudiness vs. Latitude  
+Southern Hemisphere: Cloudiness vs. Latitude  
+Northern Hemisphere: Wind Speed vs. Latitude  
+Southern Hemisphere: Wind Speed vs. Latitude  
 
-Latitude vs. Cloudiness
+![image](https://github.com/user-attachments/assets/43228f05-b6d8-4587-80db-2b1968f13b2c)
 
-Latitude vs. Wind Speed
 
-Requirement 2: Compute Linear Regression for Each Relationship
-To fulfill the second requirement, compute the linear regression for each relationship. Separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude). You may find it helpful to define a function in order to create the linear regression plots.
+![image](https://github.com/user-attachments/assets/03626dc3-ffe2-41c1-a122-4de7a5c310be)
 
-Next, create a series of scatter plots. Be sure to include the linear regression line, the model's formula, and the r values as you can see in the following image
-
-Sample scatter plot with the linear regression line.
-
-You should create the following plots:
-
-Northern Hemisphere: Temperature vs. Latitude
-
-Southern Hemisphere: Temperature vs. Latitude
-
-Northern Hemisphere: Humidity vs. Latitude
-
-Southern Hemisphere: Humidity vs. Latitude
-
-Northern Hemisphere: Cloudiness vs. Latitude
-
-Southern Hemisphere: Cloudiness vs. Latitude
-
-Northern Hemisphere: Wind Speed vs. Latitude
-
-Southern Hemisphere: Wind Speed vs. Latitude
 
 After each pair of plots, explain what the linear regression is modeling. Describe any relationships that you notice and any other findings you may uncover.
 
